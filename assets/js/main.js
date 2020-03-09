@@ -10,8 +10,23 @@ steuersatz4 = 0.45;
 var nettobetrag  = 0; // Nettobetrag
 var betrag = 0; // Bruttobetrag
 var steuerbetrag = 0; // Mehrwertsteuer
-  
+
+
+
+
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+  }
+
+
 function berechnen()
+
 {
  
   with(window.document.formular) {
