@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/">
+</head>
+<body>
+
+    
+    
+    <h1>Steuerrechner</H3>
+    
+    <P>
+    <!-- 1. Formular mit Eingabefeld fuer Bruttobetrag -->
+    <FORM NAME="formular">  
+    Zu versteuernder Betrag 
+    <!-- 1. Element: Eingabefeld netto fuer Nettoeingabe -->
+    <INPUT TYPE="text" NAME="netto" VALUE="" SIZE="16" onChange="berechnen()";>  
+    <!-- 2. Element: Berechnungsbutton -->
+    <INPUT TYPE="button" VALUE="Berechne!" onClick="berechnen();">  
+    <P>
+    Betrag: 
+    <!-- 3. Element: Ausgabefeld brutto fuer Bruttobetrag -->
+    <INPUT TYPE="text" NAME="brutto" VALUE="0" SIZE=16 READONLY onChange="ruecksetzen();">  
+    Mehrwertsteuer: 
+    <!-- 4. Element: Ausgabefeld mwst fuer Mehrwertsteuer -->
+    <INPUT TYPE="text" NAME="mwst" VALUE="0" SIZE=16 READONLY onChange="ruecksetzen();">  
+    </FORM>  
+
+
+
+
+
+<script src="assets/js/main.js"></script>
+</body>
+</html> 
+
+
+
