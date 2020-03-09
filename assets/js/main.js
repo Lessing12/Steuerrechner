@@ -32,17 +32,18 @@ function berechnen()
     }
     if(nettobetrag >=9409 && nettobetrag <= 14532){
        
-    // MWst und Brutto berechnen
-    steuerbetrag = eval(nettobetrag + "*" + steuersatz1);
-    betrag = eval(nettobetrag + "-" + steuerbetrag);
-    l
+    
+    // steuerbetrag = eval(nettobetrag + "*" + steuersatz1);
+    // betrag = eval(nettobetrag + "-" + steuerbetrag);
+    console.log(nettobetrag)
+    let z = (nettobetrag-9408)/10000
+    betrag=(972.87*z+1400)*z   
     // MWSt und Brutto ausgeben
     brutto.value = betrag;
     mwst.value = steuerbetrag;
     }
     else if(nettobetrag >=14532 && nettobetrag <= 57000){
-        // steuerbetrag = eval(nettobetrag + "*" + steuersatz2); 
-        // betrag = eval(nettobetrag + "-" + steuerbetrag);
+
         console.log(nettobetrag)
         let z = (nettobetrag-14532)/10000
         betrag=(212.02*z+2397)*z+972.79     
@@ -50,17 +51,23 @@ function berechnen()
         mwst.value = steuerbetrag;
     }
       if(nettobetrag >=57052 && nettobetrag <= 270500){
-       
+        console.log(nettobetrag)
+        // let z = (nettobetrag-9408)/10000
+        betrag=(0.42*nettobetrag-8963.74)   
+
+
         // MWst und Brutto berechnen
-        steuerbetrag = eval(nettobetrag + "*" + steuersatz3);
-        betrag = eval(nettobetrag + "-" + steuerbetrag);
+        // steuerbetrag = eval(nettobetrag + "*" + steuersatz3);
+        // betrag = eval(nettobetrag + "-" + steuerbetrag);
         // MWSt und Brutto ausgeben
-        brutto.value = bruttobetrag;
+        brutto.value = betrag;
         mwst.value = steuerbetrag;
         }
         else if(nettobetrag >= 270501){
-            steuerbetrag = eval(nettobetrag + "*" + steuersatz4); 
-            betrag = eval(nettobetrag + "-" + steuerbetrag);
+            betrag=(0.45*nettobetrag-17078.74) 
+
+            // steuerbetrag = eval(nettobetrag + "*" + steuersatz4); 
+            // betrag = eval(nettobetrag + "-" + steuerbetrag);
             brutto.value = betrag;
             mwst.value = steuerbetrag;
         }
